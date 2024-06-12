@@ -1,0 +1,38 @@
+def calculate(number1,number2,operation):
+  if operation==1:
+    return number1+number2
+  elif operation==2:
+    return number1-number2
+  elif operation==3:
+    return number1*number2
+  elif operation==4:
+    return number1/number2
+  else:
+    return "Invalid Operation!!"
+
+def main():
+  print("Welcome to the Simple Calculator!!!")
+  while True:
+    try:
+      number1=int(input("Enter the first number: "))
+      number2=int(input("Enter the second number: "))
+      print("Choose the operation you want to perform")
+      print("Press 1 for Addition")
+      print("Press 2 for Subtraction")
+      print("Press 3 for Multiplication")
+      print("Press 4 for Division")
+      operation=int(input())
+      result=calculate(number1,number2,operation)
+      print("The result is: ",result)
+
+      print("Would you like to perform another operation?(Y/N)")
+      con=input()
+      if(con.lower()!="y"):
+        break
+      
+    except ValueError:
+      print("Invalid input!!")
+
+if __name__=="__main__":
+  main()
+  
